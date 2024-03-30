@@ -22,4 +22,13 @@ public class AppTest
         App app = new App();
         assertEquals("Hello World!", app.getMessage());
     }
+
+    @Test
+    public void testAppMessageWithCustomInput() {
+        App app = new App();
+        String customMessage = "Custom Message!";
+        app.setMessage(customMessage);
+        assertEquals(customMessage, app.getMessage());
+    }
+    
 }
