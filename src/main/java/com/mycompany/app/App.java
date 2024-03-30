@@ -6,6 +6,7 @@ package com.mycompany.app;
 public class App {
 
     private static final String MESSAGE = "Hello World!";
+    private String customMessage;
 
     public App() {}
 
@@ -14,10 +15,10 @@ public class App {
     }
 
     public String getMessage() {
-        return MESSAGE;
+        return customMessage != null? customMessage : MESSAGE;
     }
 
     public void setMessage(String customMessage) {
-
+        this.customMessage = customMessage;
     }
 }
